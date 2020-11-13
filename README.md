@@ -1,5 +1,5 @@
 # Attestation de deplacement (COVID-19)
-**Description**: Ce projet propose une API ecrite en Java *(minimum Java 8)* permettant de generer une attestation de deplacement, en s'inspirant du generateur officiel du gouvernement (https://github.com/LAB-MI/attestation-deplacement-derogatoire-q4-2020).
+**Description**: Ce projet propose une API **_NON OFFICIELLE_** ecrite en Java *(minimum Java 8)* permettant de generer une attestation de deplacement, en s'inspirant du generateur officiel du gouvernement (https://github.com/LAB-MI/attestation-deplacement-derogatoire-q4-2020).
 
 Il utilise 2 dependances en interne : 
 * PDFBox pour l'ajout des donnees du PDF (https://pdfbox.apache.org/).
