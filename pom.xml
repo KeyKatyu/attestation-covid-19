@@ -2,18 +2,46 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>fr.covid</groupId>
-    <artifactId>attestation</artifactId>
-
-    <packaging>jar</packaging>
+    <groupId>com.github.afelipez</groupId>
+    <artifactId>attestation-covid-19</artifactId>
     <version>1.0.0</version>
-    <name>attestation</name>
-    <url>http://maven.apache.org</url>
+    <packaging>jar</packaging>
+
+    <!-- Maven Central Repository -->
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>Java API to generate COVID-19 travel certificate, based on the official French government generator (https://github.com/LAB-MI/attestation-deplacement-derogatoire-q4-2020).</description>
+    <url>https://github.com/afelipez/attestation-covid-19</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>afelipez</name>
+            <email></email>
+            <organization>com.github.afelipez</organization>
+            <organizationUrl>https://github.com/afelipez</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/afelipez/attestation-covid-19.git</connection>
+        <developerConnection>scm:git:ssh://github.com:afelipez/attestation-covid-19.git</developerConnection>
+        <url>http://github.com/afelipez/attestation-covid-19/tree/master</url>
+    </scm>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <!-- Project -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
 
+        <!-- Dependencies -->
         <pdfbox.version>2.0.21</pdfbox.version>
         <zxing.version>3.4.1</zxing.version>
         <junit.jupiter.version>5.5.2</junit.jupiter.version>

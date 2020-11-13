@@ -1,23 +1,49 @@
 # Attestation de deplacement (COVID-19)
-**Description**: Ce projet propose une API ecrite en Java permettant de generer une attestation de deplacement, en s'inspirant du generateur officiel du gouvernement (https://github.com/LAB-MI/attestation-deplacement-derogatoire-q4-2020).
+**Description**: Ce projet propose une API ecrite en Java *(minimum Java 8)* permettant de generer une attestation de deplacement, en s'inspirant du generateur officiel du gouvernement (https://github.com/LAB-MI/attestation-deplacement-derogatoire-q4-2020).
+
 Il utilise 2 dependances en interne : 
 * PDFBox pour l'ajout des donnees du PDF (https://pdfbox.apache.org/).
 * Zxing pour la generation du QRCode (https://github.com/zxing/zxing).
 
 ## Installation
-_Maven_
+**Maven**
+```xml
+<repositories>
+	<repository>
+	    <id>jitpack.io</id>
+	    <url>https://jitpack.io</url>
+	</repository>
+  </repositories>
+```
 ```xml
 <dependency>
-    <groupId>com.zaxxer</groupId>
-    <artifactId>HikariCP</artifactId>
-    <version>3.4.5</version>
+    <groupId>com.github.afelipez</groupId>
+    <artifactId>attestation-covid-19</artifactId>
+    <version>1.0.0</version>
 </dependency>
 ```
 
-_Gradle_
+**Gradle** _(Groovy)_
 ```groovy
-apply plugin: "com.github.ben-manes.versions"
+repositories {
+    jcenter()
+    maven { url "https://jitpack.io" }
+}
+dependencies {
+    implementation 'com.github.afelipez:attestation-covid-19'
+}
 ```
+**Gradle** _(Kotlin DSL)_
+```kotlin
+repositories {
+    jcenter()
+    maven("https://jitpack.io")
+}
+dependencies {
+    implementation("com.github.afelipez:attestation-covid-19")
+}
+```
+
 ## Usage
 ```java
 AttestationBuilder
@@ -35,3 +61,6 @@ AttestationBuilder
     .qrCode(true) // true : QRCode dans le PDF
     .pdf(Path.of("./attestation.pdf")); // Chemin du PDF genere
 ```
+
+## Publication
+* Cette API a ete publiee avec JitPack (https://jitpack.io/docs/#publishing-on-jitpack)
