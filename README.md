@@ -30,7 +30,7 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 dependencies {
-    implementation 'com.github.afelipez:attestation-covid-19'
+    implementation 'com.github.afelipez:attestation-covid-19:1.0.0'
 }
 ```
 **Gradle** _(Kotlin DSL)_
@@ -40,26 +40,30 @@ repositories {
     maven("https://jitpack.io")
 }
 dependencies {
-    implementation("com.github.afelipez:attestation-covid-19")
+    implementation("com.github.afelipez:attestation-covid-19:1.0.0")
 }
 ```
 
 ## Usage
 ```java
-AttestationBuilder
-    .create()
-    .prenom("Jean")
-    .nom("DUPONT")
-    .dateDeNaissance(LocalDate.of(2000, 01, 01))
-    .lieuDeNaissance("Paris")
-    .adresse("25 rue du General de Gaulle")
-    .ville("Paris")
-    .codePostal(75001)
-    .dateDeSortie(LocalDate.of(2020, 11, 12))
-    .heureDeSortie(LocalTime.of(12, 30))
-    .motifDeDeplacement(MotifDeplacement.ENFANTS)
-    .qrCode(true) // true : QRCode dans le PDF
-    .pdf(Path.of("./attestation.pdf")); // Chemin du PDF genere
+public class Main {
+    public static void main(String[] args) throws IOException, WriterException {
+        AttestationBuilder
+                .create()
+                .prenom("Jean")
+                .nom("DUPONT")
+                .dateDeNaissance(LocalDate.of(2000, 1, 1))
+                .lieuDeNaissance("Paris")
+                .adresse("25 rue du General de Gaulle")
+                .ville("Paris")
+                .codePostal(75001)
+                .dateDeSortie(LocalDate.of(2020, 11, 12))
+                .heureDeSortie(LocalTime.of(12, 30))
+                .motifDeDeplacement(MotifDeplacement.ENFANTS)
+                .qrCode(true) // true : QRCode dans le PDF
+                .pdf(Paths.get("./attestation.pdf")); // Chemin du PDF genere
+    }
+}
 ```
 
 ## Publication
