@@ -17,9 +17,9 @@ Il utilise 2 dependances en interne :
 ```
 ```xml
 <dependency>
-    <groupId>com.github.afelipez</groupId>
-    <artifactId>attestation-covid-19</artifactId>
-    <version>1.0.0</version>
+    <groupId>com.github.keykatyu</groupId>
+    <artifactId>attestation-deplacement-covid-19</artifactId>
+    <version>1.0.4</version>
 </dependency>
 ```
 
@@ -30,7 +30,7 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 dependencies {
-    implementation 'com.github.afelipez:attestation-covid-19:1.0.0'
+    implementation 'com.github.keykatyu:attestation-deplacement-covid-19:1.0.4'
 }
 ```
 **Gradle** _(Kotlin DSL)_
@@ -40,7 +40,7 @@ repositories {
     maven("https://jitpack.io")
 }
 dependencies {
-    implementation("com.github.afelipez:attestation-covid-19:1.0.0")
+    implementation("com.github.keykatyu:attestation-deplacement-covid-19:1.0.4")
 }
 ```
 
