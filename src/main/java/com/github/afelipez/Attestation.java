@@ -33,6 +33,7 @@ public class Attestation {
         this.dateSortie = Objects.requireNonNull(dateSortie);
         this.heureSortie = Objects.requireNonNull(heureSortie);
         this.motifDeplacement = Objects.requireNonNull(motifDeplacement);
+        System.out.println("test github");
     }
 
     public String getPrenom() {
