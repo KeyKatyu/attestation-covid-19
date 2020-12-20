@@ -44,7 +44,7 @@ public class PdfBuilder {
             PDPage page1 = document.getPage(0);
             try(PDPageContentStream contentStreamP1 = new PDPageContentStream(document, page1, PDPageContentStream.AppendMode.APPEND, true)){
                 drawAllFieldsTo(contentStreamP1);
-                if (smallQRCode != null) drawQRCodeTo(document, contentStreamP1, smallQRCode, (int) page1.getMediaBox().getWidth() - 156, 100, 92, 92);
+                if (smallQRCode != null) drawQRCodeTo(document, contentStreamP1, smallQRCode, (int) page1.getMediaBox().getWidth() - 156, 80, 310, 310);
             }
 
             //Page 2
@@ -76,21 +76,21 @@ public class PdfBuilder {
 
     private void drawAllFieldsTo(PDPageContentStream contentStream) throws IOException {
         drawField(contentStream, attestation.getPrenom()+" "+attestation.getNom(),
-                119, 655);
+                119, 660);
         drawField(contentStream, attestation.dateNaissanceToString(),
-                119, 620);
+                119, 630);
         drawField(contentStream, attestation.getLieuNaissance(),
-                297, 620);
+                297, 630);
         drawField(contentStream,attestation.getAdresse()+" "+attestation.getCodePostal()+" "+attestation.getVille(),
                 133, 600);
         drawField(contentStream, attestation.getVille(), DEFAULT_FONT, DEFAULT_FONT_SIZE,
-                105, 120);
+                105, 125);
         drawField(contentStream, attestation.dateSortieToString(),
-                91, 90);
+                91, 95);
         drawField(contentStream, attestation.heureSortieToString(),
-                264, 90);
+                264, 95);
         drawField(contentStream,  "x", DEFAULT_FONT,
-                18, 78, attestation.getMotifDeplacement().y());
+                18, 85, attestation.getMotifDeplacement().y());
     }
 
     private void drawField(PDPageContentStream contentStream, String text, int x, int y) throws IOException {
