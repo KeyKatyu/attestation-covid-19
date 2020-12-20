@@ -1,6 +1,4 @@
-package com.github.afelipez;
-
-import com.github.afelipez.motif.MotifDeplacement;
+package com.github.keykatyu;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -8,6 +6,8 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.Locale;
 import java.util.Objects;
+
+import com.github.keykatyu.motif.MotifDeplacement;
 
 public class Attestation {
 
@@ -33,7 +33,6 @@ public class Attestation {
         this.dateSortie = Objects.requireNonNull(dateSortie);
         this.heureSortie = Objects.requireNonNull(heureSortie);
         this.motifDeplacement = Objects.requireNonNull(motifDeplacement);
-        System.out.println("test github");
     }
 
     public String getPrenom() {
