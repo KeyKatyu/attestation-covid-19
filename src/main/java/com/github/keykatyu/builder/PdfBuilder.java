@@ -44,7 +44,7 @@ public class PdfBuilder {
             PDPage page1 = document.getPage(0);
             try(PDPageContentStream contentStreamP1 = new PDPageContentStream(document, page1, PDPageContentStream.AppendMode.APPEND, true)){
                 drawAllFieldsTo(contentStreamP1);
-                if (smallQRCode != null) drawQRCodeTo(document, contentStreamP1, smallQRCode, (int) page1.getMediaBox().getWidth() - 156, 50, 150, 150);
+                if (smallQRCode != null) drawQRCodeTo(document, contentStreamP1, smallQRCode, (int) page1.getMediaBox().getWidth() - 156, 30, 150, 150);
             }
 
             //Page 2
