@@ -44,7 +44,7 @@ public class PdfBuilder {
             PDPage page1 = document.getPage(0);
             try(PDPageContentStream contentStreamP1 = new PDPageContentStream(document, page1, PDPageContentStream.AppendMode.APPEND, true)){
                 drawAllFieldsTo(contentStreamP1);
-                if (smallQRCode != null) drawQRCodeTo(document, contentStreamP1, smallQRCode, (int) page1.getMediaBox().getWidth() - 156, 80, 100, 100);
+                if (smallQRCode != null) drawQRCodeTo(document, contentStreamP1, smallQRCode, (int) page1.getMediaBox().getWidth() - 156, 50, 150, 150);
             }
 
             //Page 2
@@ -90,7 +90,7 @@ public class PdfBuilder {
         drawField(contentStream, attestation.heureSortieToString(),
                 264, 95);
         drawField(contentStream,  "x", DEFAULT_FONT,
-                18, 90, attestation.getMotifDeplacement().y());
+                18, 60, attestation.getMotifDeplacement().y());
     }
 
     private void drawField(PDPageContentStream contentStream, String text, int x, int y) throws IOException {
