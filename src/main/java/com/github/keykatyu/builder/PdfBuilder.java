@@ -90,7 +90,7 @@ public class PdfBuilder {
         drawField(contentStream, attestation.heureSortieToString(),
                 264, 95);
         drawField(contentStream,  "x", DEFAULT_FONT,
-                18, 60, attestation.getMotifDeplacement().y());
+                18, 56, attestation.getMotifDeplacement().y());
     }
 
     private void drawField(PDPageContentStream contentStream, String text, int x, int y) throws IOException {

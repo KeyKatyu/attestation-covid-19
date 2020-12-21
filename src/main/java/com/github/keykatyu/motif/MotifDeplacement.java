@@ -2,8 +2,8 @@ package com.github.keykatyu.motif;
 
 public enum MotifDeplacement {
 
-    TRAVAIL("Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle ou un établissement d’enseignement ou de formation ; déplacements professionnels ne pouvant être différés ; déplacements pour un concours ou un examen.",550),
-    ACHATS("Déplacements pour se rendre dans un établissement culturel autorisé ou un lieu de culte ; déplacements pour effectuer des achats de biens, pour des services dont la fourniture estautorisée, pour les retraits de commandes et les livraisons à domicile.",533),
+    TRAVAIL("Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle ou un établissement d’enseignement ou de formation ; déplacements professionnels ne pouvant être différés ; déplacements pour un concours ou un examen.",500),
+    ACHATS("Déplacements pour se rendre dans un établissement culturel autorisé ou un lieu de culte ; déplacements pour effectuer des achats de biens, pour des services dont la fourniture estautorisée, pour les retraits de commandes et les livraisons à domicile.",470),
     SANTE("Consultations, examens et soins ne pouvant être assurés à distance et l’achat de médicaments.",477),
     FAMILLE("Déplacements pour motif familial impérieux, pour l'assistance aux personnes vulnérables et précaires ou la garde d'enfants.",435),
     HANDICAP("Déplacement des personnes en situation de handicap et leur accompagnant.",396),
