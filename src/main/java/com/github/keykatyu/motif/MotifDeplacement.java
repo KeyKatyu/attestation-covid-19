@@ -9,8 +9,8 @@ public enum MotifDeplacement {
     HANDICAP("Déplacement des personnes en situation de handicap et leur accompagnant.",315),
     SPORT_ANIMAUX("Déplacements en plein air ou vers un lieu de plein air, sans changement du lieu de résidence, dans la limite de trois heures quotidiennes et dans un rayon maximal de vingt kilomètres autour du domicile, liés soit à l’activité physique ou aux loisirs individuels, à l’exclusion de toute pratique sportive collective et de toute proximité avec d’autres personnes, soit à la promenade avec les seules personnes regroupées dans un même domicile, soit aux besoins des animaux de compagnie.",293),
     CONVOCATION("Convocation judiciaire ou administrative et pour se rendre dans un service public.",210),
-    MISSIONS("Participation à des missions d'intérêt général sur demande de l'autorité administrative.",190),
-    ENFANTS("Déplacement pour chercher les enfants à l’école et à l’occasion de leurs activités périscolaires.",170);
+    MISSIONS("Participation à des missions d'intérêt général sur demande de l'autorité administrative.",180),
+    ENFANTS("Déplacement pour chercher les enfants à l’école et à l’occasion de leurs activités périscolaires.",160);
 
     private final String raison;
     private final int y;
