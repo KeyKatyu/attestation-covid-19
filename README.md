@@ -2,9 +2,9 @@
 
 [![](https://jitpack.io/v/KeyKatyu/attestation-deplacement-covid-19.svg)](https://jitpack.io/#KeyKatyu/attestation-deplacement-covid-19)
 
-Ce projet propose une API **_NON OFFICIELLE_** ecrite en Java *(minimum Java 8)* permettant de generer une attestation de deplacement, en s'inspirant du generateur officiel du gouvernement (https://github.com/LAB-MI/attestation-deplacement-derogatoire-q4-2020).
+Ce projet propose une API **_NON OFFICIELLE_** écrite en Java *(minimum Java 8)* permettant de générer une attestation de deplacement, en s'inspirant du generateur officiel du gouvernement (https://github.com/LAB-MI/attestation-deplacement-derogatoire-q4-2020).
 
-Il utilise 2 dependances en interne : 
+Il utilise 2 dépendances en interne : 
 * PDFBox pour l'ajout des donnees du PDF (https://pdfbox.apache.org/).
 * Zxing pour la generation du QRCode (https://github.com/zxing/zxing).
 
@@ -69,5 +69,6 @@ public class Main {
 }
 ```
 
-## Publication
-* Cette API a ete publiee avec JitPack (https://jitpack.io/docs/#publishing-on-jitpack)
+## Informations
+* Cette API a ete publiee avec JitPack (https://jitpack.io/docs/#publishing-on-jitpack).
+* Les attestations générées sont les dernières en vigueur, la librarie est à jour. Si elle venait à ne plus l'être, n'hésitez pas à ouvrir une issue !
