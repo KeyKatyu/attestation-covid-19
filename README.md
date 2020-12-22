@@ -2,7 +2,7 @@
 
 [![](https://jitpack.io/v/KeyKatyu/attestation-deplacement-covid-19.svg)](https://jitpack.io/#KeyKatyu/attestation-deplacement-covid-19)
 
-Ce projet propose une API **_NON OFFICIELLE_** écrite en Java *(minimum Java 8)* permettant de générer une attestation de deplacement, en s'inspirant du generateur officiel du gouvernement (https://github.com/LAB-MI/attestation-deplacement-derogatoire-q4-2020).
+Ce projet propose une API non officielle écrite en Java *(Java 8 ou supérieur)* permettant de générer une attestation de deplacement, en s'inspirant du générateur officiel du gouvernement (https://github.com/LAB-MI/attestation-deplacement-derogatoire-q4-2020).
 
 Il utilise 2 dépendances en interne : 
 * PDFBox pour l'ajout des donnees du PDF (https://pdfbox.apache.org/).
@@ -22,7 +22,7 @@ Il utilise 2 dépendances en interne :
 <dependency>
     <groupId>com.github.keykatyu</groupId>
     <artifactId>attestation-deplacement-covid-19</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 
@@ -33,7 +33,7 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 dependencies {
-    implementation 'com.github.keykatyu:attestation-deplacement-covid-19:1.0.4'
+    implementation 'com.github.keykatyu:attestation-deplacement-covid-19:1.0.0'
 }
 ```
 **Gradle** _(Kotlin DSL)_
@@ -43,7 +43,7 @@ repositories {
     maven("https://jitpack.io")
 }
 dependencies {
-    implementation("com.github.keykatyu:attestation-deplacement-covid-19:1.0.4")
+    implementation("com.github.keykatyu:attestation-deplacement-covid-19:1.0.0")
 }
 ```
 
@@ -70,5 +70,5 @@ public class Main {
 ```
 
 ## Informations
-* Cette API a ete publiee avec JitPack (https://jitpack.io/docs/#publishing-on-jitpack).
+* Cette API a été publiée avec JitPack (https://jitpack.io/docs/#publishing-on-jitpack).
 * Les attestations générées sont les dernières en vigueur, la librarie est à jour. Si elle venait à ne plus l'être, n'hésitez pas à ouvrir une issue !
