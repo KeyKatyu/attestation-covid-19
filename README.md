@@ -22,7 +22,7 @@ Il utilise 2 dépendances en interne :
 <dependency>
     <groupId>com.github.keykatyu</groupId>
     <artifactId>attestation-deplacement-covid-19</artifactId>
-    <version>1.0.0</version>
+    <version>v1.0.0</version>
 </dependency>
 ```
 
@@ -33,7 +33,7 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 dependencies {
-    implementation 'com.github.keykatyu:attestation-deplacement-covid-19:1.0.0'
+    implementation 'com.github.keykatyu:attestation-deplacement-covid-19:v1.0.0'
 }
 ```
 **Gradle** _(Kotlin DSL)_
@@ -43,7 +43,7 @@ repositories {
     maven("https://jitpack.io")
 }
 dependencies {
-    implementation("com.github.keykatyu:attestation-deplacement-covid-19:1.0.0")
+    implementation("com.github.keykatyu:attestation-deplacement-covid-19:v1.0.0")
 }
 ```
 
