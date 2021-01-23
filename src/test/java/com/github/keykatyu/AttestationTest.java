@@ -25,7 +25,7 @@ public class AttestationTest {
                         75001,
                         LocalDate.of(2000, 01, 01),
                         LocalTime.of(12, 00, 00),
-                        MotifDeplacement.ACHATS));
+                        MotifDeplacement.CONVOCATION));
     }
 
     @Test
@@ -40,7 +40,7 @@ public class AttestationTest {
                 75001,
                 LocalDate.of(2000, 01, 01),
                 LocalTime.of(12, 00, 00),
-                MotifDeplacement.ACHATS);
+                MotifDeplacement.CONVOCATION);
 
         assertEquals("Jean", attestationActual.getPrenom());
         assertEquals("DUPONT", attestationActual.getNom());
@@ -50,7 +50,7 @@ public class AttestationTest {
         assertEquals(75001, attestationActual.getCodePostal());
         assertEquals(LocalDate.of(2000, 01, 01), attestationActual.getDateSortie());
         assertEquals(LocalTime.of(12, 00, 00), attestationActual.getHeureSortie());
-        assertEquals(MotifDeplacement.ACHATS, attestationActual.getMotifDeplacement());
+        assertEquals(MotifDeplacement.CONVOCATION, attestationActual.getMotifDeplacement());
 
     }
 }

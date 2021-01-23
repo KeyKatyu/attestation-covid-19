@@ -26,7 +26,7 @@ public class AttestationBuilderTest {
                 75001,
                 LocalDate.of(2000, 1, 1),
                 LocalTime.of(12, 0, 0),
-                MotifDeplacement.ACHATS);
+                MotifDeplacement.CONVOCATION);
 
         assertEquals(expectedAttestation, AttestationBuilder
                 .create()
@@ -39,7 +39,7 @@ public class AttestationBuilderTest {
                 .codePostal(75001)
                 .dateDeSortie(LocalDate.of(2000, 1, 1))
                 .heureDeSortie(LocalTime.of(12, 0, 0))
-                .motifDeDeplacement(MotifDeplacement.ACHATS)
+                .motifDeDeplacement(MotifDeplacement.CONVOCATION)
                 .qrCode(false)
                 .pdf("./src/test/attestation_test.pdf")
         );

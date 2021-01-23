@@ -36,7 +36,7 @@ public class PdfBuilderTest {
                 75001,
                 LocalDate.of(2000, 01, 01),
                 LocalTime.of(12, 00, 00),
-                MotifDeplacement.ACHATS), null, null);
+                MotifDeplacement.CONVOCATION), null, null);
 
         // Generate PDF
         pdfBuilder.pdf(path);
