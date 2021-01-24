@@ -44,14 +44,14 @@ public class PdfBuilder {
             PDPage page1 = document.getPage(0);
             try(PDPageContentStream contentStreamP1 = new PDPageContentStream(document, page1, PDPageContentStream.AppendMode.APPEND, true)){
                 drawAllFieldsTo(contentStreamP1);
-                if (smallQRCode != null) drawQRCodeTo(document, contentStreamP1, smallQRCode, (int) page1.getMediaBox().getWidth() - 160, 20, 200, 200);
+                if (smallQRCode != null) drawQRCodeTo(document, contentStreamP1, smallQRCode, (int) page1.getMediaBox().getWidth() - 130, 20, 200, 200);
             }
 
             //Page 2
             if (bigQRCode != null){
                 PDPage page2 = new PDPage(PDRectangle.A4); document.addPage(page2);
                 try(PDPageContentStream contentStreamP2 = new PDPageContentStream(document, page2)){
-                    drawQRCodeTo(document, contentStreamP2, bigQRCode, 50, (int) page2.getMediaBox().getWidth() - 400, 300, 300);
+                    drawQRCodeTo(document, contentStreamP2, bigQRCode, 50, (int) page2.getMediaBox().getWidth() - 250, 300, 300);
                 }
             }
             document.save(path);
