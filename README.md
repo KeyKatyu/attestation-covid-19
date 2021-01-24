@@ -73,4 +73,4 @@ public class Main {
 * Cette API a été publiée avec JitPack (https://jitpack.io/docs/#publishing-on-jitpack).
 * Les attestations générées sont les dernières en vigueur, la librarie est à jour. Si elle venait à ne plus l'être, n'hésitez pas à ouvrir une issue !
 
-:warning: **La librairie est en cours de mise à jour pour correspondre à la nouvelle attestation du COUVRE-FEU de 18h à 6h.**
+:warning: **Mesure en cours : COUVRE-FEU de 18h à 6h.**
