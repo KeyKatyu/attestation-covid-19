@@ -4,7 +4,7 @@
 
     <groupId>com.github.keykatyu</groupId>
     <artifactId>attestation-deplacement-covid-19</artifactId>
-    <version>v1.0.9</version>
+    <version>v1.1.0</version>
     <packaging>jar</packaging>
 
     <!-- Maven Central Repository -->
@@ -22,7 +22,7 @@
     <developers>
         <developer>
             <name>KeyKatyu</name>
-            <email></email>
+            <email>contact.keykatyu@gmail.com</email>
             <organization>com.github.keykatyu</organization>
             <organizationUrl>https://github.com/KeyKatyu</organizationUrl>
         </developer>
