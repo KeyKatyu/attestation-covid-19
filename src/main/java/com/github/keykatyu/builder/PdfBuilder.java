@@ -76,13 +76,13 @@ public class PdfBuilder {
 
     private void drawAllFieldsTo(PDPageContentStream contentStream) throws IOException {
         drawField(contentStream, attestation.getPrenom() + " " + attestation.getNom(),
-                119, 630);
+                119, 620);
         drawField(contentStream, attestation.dateNaissanceToString(),
                 119, 600);
         drawField(contentStream, attestation.getLieuNaissance(),
                 297, 600);
         drawField(contentStream,attestation.getAdresse()+" "+attestation.getCodePostal()+" "+attestation.getVille(),
-                133, 560);
+                133, 580);
         drawField(contentStream, attestation.getVille(), DEFAULT_FONT, DEFAULT_FONT_SIZE,
                 105, 190);
         drawField(contentStream, attestation.dateSortieToString(),
