@@ -44,14 +44,14 @@ public class PdfBuilder {
             PDPage page1 = document.getPage(0);
             try(PDPageContentStream contentStreamP1 = new PDPageContentStream(document, page1, PDPageContentStream.AppendMode.APPEND, true)){
                 drawAllFieldsTo(contentStreamP1);
-                if (smallQRCode != null) drawQRCodeTo(document, contentStreamP1, smallQRCode, (int) page1.getMediaBox().getWidth() - 156, -2, 150, 150);
+                if (smallQRCode != null) drawQRCodeTo(document, contentStreamP1, smallQRCode, (int) page1.getMediaBox().getWidth() - 160, 20, 200, 200);
             }
 
             //Page 2
             if (bigQRCode != null){
                 PDPage page2 = new PDPage(PDRectangle.A4); document.addPage(page2);
                 try(PDPageContentStream contentStreamP2 = new PDPageContentStream(document, page2)){
-                    drawQRCodeTo(document, contentStreamP2, bigQRCode, 50, (int) page2.getMediaBox().getWidth() - 350, 300, 300);
+                    drawQRCodeTo(document, contentStreamP2, bigQRCode, 50, (int) page2.getMediaBox().getWidth() - 400, 300, 300);
                 }
             }
             document.save(path);
@@ -76,7 +76,7 @@ public class PdfBuilder {
 
     private void drawAllFieldsTo(PDPageContentStream contentStream) throws IOException {
         drawField(contentStream, attestation.getPrenom() + " " + attestation.getNom(),
-                119, 625);
+                119, 630);
         drawField(contentStream, attestation.dateNaissanceToString(),
                 119, 600);
         drawField(contentStream, attestation.getLieuNaissance(),
@@ -86,9 +86,9 @@ public class PdfBuilder {
         drawField(contentStream, attestation.getVille(), DEFAULT_FONT, DEFAULT_FONT_SIZE,
                 105, 190);
         drawField(contentStream, attestation.dateSortieToString(),
-                91, 150);
+                91, 160);
         drawField(contentStream, attestation.heureSortieToString(),
-                264, 150);
+                264, 160);
         drawField(contentStream,  "x", DEFAULT_FONT,
                 18, 58, attestation.getMotifDeplacement().y());
     }
@@ -108,10 +108,10 @@ public class PdfBuilder {
     private void addMetadataTo(PDDocumentInformation pdi){
         pdi.setTitle("COVID-19 - Déclaration de déplacement");
         pdi.setSubject("Attestation de déplacement dérogatoire");
-        Arrays.asList("covid19", "covid-19", "attestation", "déclaration", "déplacement", "officielle", "gouvernement")
+        Arrays.asList("covid19", "covid-19", "attestation", "déclaration", "déplacement", "officielle", "gouvernement", "couvre-feu")
                 .forEach(pdi::setKeywords);
         pdi.setProducer("DNUM/SDIT");
-        pdi.setCreator("");
+        pdi.setCreator("Attestations'Bot");
         pdi.setAuthor("Ministère de l'intérieur");
     }
 
